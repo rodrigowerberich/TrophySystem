@@ -4,31 +4,37 @@ Demo of a simple trophy system based of an event listener of a transactional dat
 ## Structure
 
 |__ dbmanager.h
+
 |__ dbmanager.cpp
 
 Class that deals with interfacing with the database, make queries and translate them into program usable data structures, also used to write to the database.
 It also generates events that listeners registered to it can react to.
 
 |__ dblistener.h
+
 |__ dblistener.cpp
 
 Listener abstract class that all dbmanager listener must implement
 
 |__ trophysystem.h
+
 |__ trophysystem.cpp
 
 Main files that describes the trophy system, how it avaliates and how it awards users their trophies
 It implements the dblistener abstract class.
 
 |__ trophy.h
+
 |__ trophy.cpp
 
 The trophy data structure
 
 |__ constants.h
+
 A helper namespace to congregate constants into a single place for easy refactoring
 
 |__ globalsystemmanager.h
+
 |__ globalsystemmanager.cpp
 
 Static storage for static objects to ease access to them
