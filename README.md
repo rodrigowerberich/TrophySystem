@@ -49,5 +49,8 @@ The executables folder contains an executable for win64 computers
 
 Every time a new transaction is added into the database an event is triggered.  Then, the trophy system check to see if any award condition is met. If so a new registry is made into the trophy table with the user id, trophy id (identifies which type of trophy it is), trophy level and a timestamp of when the user received the award.
 
+# Tools
 
+Developed using Qt Creator 4.10.0 Community Edition
+Using QT 5.13.1 MinGW 7.3.0 64-bit
 
