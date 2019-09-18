@@ -50,6 +50,8 @@ TrophySystem::~TrophySystem()
 
 void TrophySystem::eventHappened(DbEvent event, const DbListenerArgumentList arguments)
 {
+    // Check if event is important to trophy system, if it is we parse the arguments
+    // and call the appropriate function
     switch (event) {
     case DbEvent::CoinsCollected:{
         int userId = dblistener::getEventArguments<int>(arguments);
@@ -70,6 +72,7 @@ void TrophySystem::eventHappened(DbEvent event, const DbListenerArgumentList arg
         break;
     }
     case DbEvent::MonsterKilled:{
+        // c++17 syntay for simplified tuple unpacking
         auto [userId, monsterId] = dblistener::getEventArguments<std::tuple<int, int>>(arguments);
         if((userId == -1) || (monsterId == -1)){
             return;
