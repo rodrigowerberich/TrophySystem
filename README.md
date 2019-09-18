@@ -45,7 +45,9 @@ Static storage for static objects to ease access to them
 
 The executables folder contains an executable for win64 computers
 
+## Brief description
 
+Every time a new transaction is added into the database an event is triggered.  Then, the trophy system check to see if any award condition is met. If so a new registry is made into the trophy table with the user id, trophy id (identifies which type of trophy it is), trophy level and a timestamp of when the user received the award.
 
 
 
